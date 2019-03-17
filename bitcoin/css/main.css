@@ -1,9 +1,13 @@
 p {
-  color: blue;
+    color: blue;
 }
 #app ul{
-  list-style:none;
+    list-style:none;
 }
 #app li > span.done {
-  text-decoration:line-through;
+    text-decoration:line-through;
+}
+
+[v-cloak] {
+    dispay:none,
 }
