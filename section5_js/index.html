@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="app">
+    <p>
+        {{message}}
+    </P>
+    <p>
+        {{count+1}}
+    </P>
+    <p>
+        {{message.split('').reverse().join('')}}
+    </P>
+    <p>
+        {{ok?'YES':'NO'}}
+    </P>
+    <h2>Mustache</h2>
+    <p>
+    {{jpyPrice | toUSD | numberFormat}}
+    </p>
+    <h2>v-bind</h2>
+    <input type="text" v-bind:value="jpyPrice | numberFormat">
+    <p>
+        {{text | readMore(20,'...')}}
+    </p>
+    <a v-bind:href="url" target="_blank">Link1</a>
+    <a :href="url" target="_blank">Link2</a><!-- v-bind省略 -->
+
+  <!--<pre>{{$data}}</pre>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
