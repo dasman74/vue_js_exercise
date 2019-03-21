@@ -24,6 +24,17 @@ var app = new Vue({
       text:'dsfsddddddddddddddddddddddddddddddddddddddddddddddddd',
       url:'https://www.google.com'
   },
+  computed: {
+      reverseMessage: function(){
+          return this.message.split('').reverse().join('')
+      }
+  },
+  methods: {
+      reversedMessageMethod: function(){
+          return this.message.split('').reverse().join('')
+      }
+  }
+
   //フィルタリング
   /*filters: {
       numberFormat : function(value){
