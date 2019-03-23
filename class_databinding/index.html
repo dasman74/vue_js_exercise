@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="app">
+    <p>
+        Hello <span class="bg-gray text-blue" v-bind:class="{large:isLarge, 'text-danger':hasError}">VueJs</span>
+    </p>
+    <p>
+        Hello <span v-bind:class="[largeClass, dangerClass]">Vue.Js!</span>
+    </p>
+    <p>
+        Hello <span v-bind:class="[isLarge2 ? largeClass2 : '', dangerClass2]">Vue Js</span>
+    </p>
+    <p>
+        Hello <span v-bind:style="{color:color, fontSize:sontSize+'px'}">Vue Js</span>
+                Hello <span v-bind:style="{color:color, 'font_size':sontSize+'px'}">Vue Js</span>
+    </p>
+    <p>
+        Hello <span v-bind:style="styleObject">Vue Js</span>
+    </p>
+  <!--<pre>{{$data}}</pre>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>

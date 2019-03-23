@@ -6,16 +6,23 @@ var app = new Vue({
         message:'',
     },
     watch:{
+        keyword: function(newKeyword, oldKeyWord) {
+            console.log(newKeyword)
+            this.message='Waiting for you stop typing...'
+            this.debouncedGetAnswer()
+        }
 
     },
     created:function(){
-        this.keyword = 'Javascript'
-        this.getAnswer()
+        //this.keyword = 'Javascript'
+        //this.getAnswer()
+        this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
     },
     methods:{
         getAnswer:function(){
             if(this.keyword===''){
                 this.items=null
+                this.message=''
                 return
             }
             this.message='Loading...'
@@ -24,6 +31,7 @@ var app = new Vue({
             axios.get('https://qiita.com/api/v2/items',{params})
             .then(function(response){
                 console.log(response)
+                vm.items=response.data
             })
             .catch(function(error){
                 vm.message='Error'+error
