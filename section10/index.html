@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="app">
+    <p v-if="toggle">
+        YES
+    </p>
+    <p v-else>
+        NO
+    </p>
+
+    <p v-if="color==='red'">
+        stop
+    </p>
+    <p v-else-if="color==='yellow'">
+        caution
+    </p>
+    <p v-else-if="color==='blue'">
+        Go
+    </p>
+    <p v-else>
+        Not Red/yellow/blue
+    </p>
+  <!--<pre>{{$data}}</pre>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>

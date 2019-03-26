@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="app">
+    <p>
+        {{counter}}
+    </p>
+    <p>
+        {{message}}
+    </p>
+    <button v-on:click="counter++">
+        click
+    </button>
+    <button v-on:click="clickHandler">
+        click2
+    </button>
+    <button v-on:click="clickHandler2($event, 'vue js')">
+        click2
+    </button>
+    <button v-on:click.once="clickHandler3">
+        Now
+    </button><br>
+    <input type="text" v-on:keyup.27="clear" v-model="message"><br>
+    <input type="text" v-on:keyup.esc="clear" v-model="message"><br>
+    <input type="text" v-on:keyup.esc.space.up="clear" v-model="message"><br>
+    <input type="text" v-on:keyup.ctrl.67="clear" v-model="message"><br>
+    <p>
+        {{message}}
+    </p>
+    <div v-on:click.shift="clickHandler4">
+        click me!
+    </div>
+    <button v-on:click="clickHandler5">
+        click1
+    </button>
+    <button @click="clickHandler5">
+        click1
+    </button>
+
+  <!--<pre>{{$data}}</pre>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+<p>

@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="app">
+  <!--<pre>{{$data}}</pre>-->
+  <p>
+      {{message}}
+      <!-- <textarea name="name" rows="8" cols="80">{{message}}</textarea> -->
+      <textarea name="name" rows="8" cols="80" v-model="message"></textarea>
+  </p>
+  <input type="text" v-model="message" value="hogehoge" />
+
+  <p>
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox">{{checked}}</label>
+  </p>
+  <p>
+      <input type="checkbox" id="red1" value="Red" v-model="colors">
+      <label for="red1">Red</label>
+      <input type="checkbox" id="green1" value="Green" v-model="colors">
+      <label for="green1">Green</label>
+      <input type="checkbox" id="blue1" value="Blue" v-model="colors">
+      <label for="blue1">Blue</label>
+  </p>
+  <p>
+      <input type="radio" id="red" value="Red" v-model="colorradio">
+      <label for="red">Red</label>
+      <input type="radio" id="green" value="Green" v-model="colorradio">
+      <label for="green">Green</label>
+      <input type="radio" id="blue" value="Blue" v-model="colorradio">
+      <label for="blue">Blue</label>
+  </p>
+
+  <p>
+      <select v-model="selected">
+          <option disabled value="">Please select one</option>
+          <option>Red</option>
+          <option>Green</option>
+          <option>Blue</option>
+      </select>
+  </p>
+  <p>
+      <select v-model="selecteds" multiple>
+          <option disabled value="">Please select one</option>
+          <option>Red</option>
+          <option>Green</option>
+          <option>Blue</option>
+      </select>
+  </p>
+  <pre>
+      {{$data}}
+  </pre>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+<p>
